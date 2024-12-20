@@ -1,0 +1,132 @@
+/* src/styles/CourseList.css */
+
+/* Reset some default styles */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.course-list {
+  /* max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px; */
+  background-color: #102134;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.search-button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.search-button svg {
+  color: white;
+  font-size: 20px;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+}
+
+.course {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.course-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.course-name {
+  font-size: 25px;
+  margin: 15px;
+  color: #333;
+}
+
+.course-description {
+  font-size: 14px;
+  margin: 0 15px 15px;
+  color: #666;
+}
+
+.enroll-button {
+  display: block;
+  width: calc(100% - 30px);
+  margin: 10px 15px 15px;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.enroll-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .courses {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .courses {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+@media (max-width: 480px) {
+  .courses {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+}
